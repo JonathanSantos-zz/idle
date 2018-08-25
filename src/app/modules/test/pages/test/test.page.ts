@@ -1,6 +1,7 @@
 import { IdleService } from './../../../idle/idle.service';
 import { Component, OnInit } from '@angular/core';
 import { ActionType } from '../../../idle/models/ActionType.enum';
+import { isNullOrUndefined } from '../../../../shared/utils/object/isNullOrUndefined';
 
 @Component({
   selector: 'app-test',
@@ -10,7 +11,7 @@ import { ActionType } from '../../../idle/models/ActionType.enum';
 export class TestComponent implements OnInit {
 
   valor = 0;
-  addValue = 6;
+  addValue = 6.73;
 
   constructor(
     private idleService: IdleService
@@ -18,7 +19,7 @@ export class TestComponent implements OnInit {
     this.idleService
       .getValue()
       .subscribe(valor => {
-        if (valor) this.valor = valor; 
+        if (!isNullOrUndefined(valor)) this.valor = valor; 
       });
   }
 
