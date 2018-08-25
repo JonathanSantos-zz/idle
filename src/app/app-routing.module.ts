@@ -10,6 +10,10 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     redirectTo: 'test'
+  },
+  {
+    path: '**',
+    loadChildren: './modules/not-found/not-found.module#NotFoundModule'
   }
 ];
 

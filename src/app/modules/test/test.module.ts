@@ -1,13 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { TestRoutingModule } from './test-routing.module';
+import { IdleModule } from './../idle/idle.module';
 import { TestComponent } from './pages/test/test.page';
+import { TestRoutingModule } from './test-routing.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    TestRoutingModule
+    TestRoutingModule,
+    IdleModule
   ],
   declarations: [ TestComponent ]
 })

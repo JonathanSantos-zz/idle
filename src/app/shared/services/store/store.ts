@@ -12,7 +12,7 @@ export abstract class Store<T> {
     protected onGet(key: string): void { }
 
     protected hasSubject (key: string): boolean {
-        return isNullOrUndefined(this.subjects[key]);
+        return !isNullOrUndefined(this.subjects[key]);
     }
 
     protected getSubject (key: string, defaultValue: T = null): BehaviorSubject<T> {
