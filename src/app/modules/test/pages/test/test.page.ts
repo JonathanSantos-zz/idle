@@ -11,7 +11,7 @@ import { isNullOrUndefined } from '../../../../shared/utils/object/isNullOrUndef
 export class TestComponent implements OnInit {
 
   valor = 0;
-  addValue = 6.73;
+  addValue = 1;
 
   constructor(
     private idleService: IdleService

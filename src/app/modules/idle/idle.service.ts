@@ -11,13 +11,15 @@ const IDLE_VALUE = 'IDLE_VALUE';
   providedIn: 'root'
 })
 export class IdleService {
+
   private value = 0;
   private idleSubscriber = new BehaviorSubject<number>(0);
+  private addValues: Action[];
 
   constructor(
     private sessionStorageService: SessionStorageService<number>
   ) {
-    sessionStorageService.add('IDLE_VALUE', this.value);
+    sessionStorageService.add(IDLE_VALUE, this.value);
     sessionStorageService
       .get(IDLE_VALUE)
       .subscribe(value => {
