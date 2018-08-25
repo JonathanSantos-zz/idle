@@ -9,7 +9,7 @@ import { parseToJson } from '../../utils/json/parseToJson';
   providedIn: 'root'
 })
 export class LocalStorageService<T> extends Store<T>{
-  
+
   private static _subjects: any = {};
 
   protected get subjects () {
