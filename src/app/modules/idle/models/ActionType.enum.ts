@@ -1,5 +1,5 @@
 
 export enum ActionType {
-    ADD,
-    REMOVE
+    ADD = 'ADD',
+    REMOVE = 'REMOVE'
 }
